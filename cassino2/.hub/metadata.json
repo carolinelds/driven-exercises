@@ -1,0 +1,1 @@
+{"slug":"cassino2","scripts":{"test":"docker-compose -f ./.hub/docker-compose.yml run app"}}

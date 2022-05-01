@@ -30,10 +30,10 @@ server.get('/receitas/:idDaReceita', (req, res) => {
   const receitaFiltrada = receitas.find(receita => receita.id === parseInt(req.params.idDaReceita));
   
   if (!receitaFiltrada){
-    res.statusSend(404);
+    res.sendStatus(404);
     return;
   }
-  
+
   receitaFiltrada.views++
   res.send(receitaFiltrada);
 });
@@ -51,7 +51,7 @@ server.post('/receitas', (req, res) => {
   }
   
   receitas.push(req.body);
-  res.statusSend(201);
+  res.sendStatus(201);
 })
 
 server.listen(5000, () => {
